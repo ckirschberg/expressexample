@@ -10,7 +10,7 @@ app.get('/destinations', (req, res) => {
   res.send('Hello World!')
 })
 app.post("/destinations", function(req, res) {
-    console.log(req.body); // This is not working now
+    console.log(req.body); // to read the req.body, in postman fill out the body and select "raw"
     
     res.send("Post request")
 })
