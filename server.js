@@ -21,7 +21,7 @@ app.put("/destinations/:id", (req, res) => {
     res.send("Put")
     console.log(req.params.id);
 })
-app.delete("destintations/:id", (req, res) => {
+app.delete("/destinations/:id", (req, res) => {
     res.send("Delete")
     console.log(req.params.id);
 })
