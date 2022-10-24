@@ -8,6 +8,8 @@ const jwt = require('jsonwebtoken');
 var passport = require("passport");
 var passportJWT = require("passport-jwt");
 const User = require("../schemas/user");
+const dotenv = require("dotenv");
+dotenv.config();
 
 // auto-refresh server on file changes: https://www.npmjs.com/package/@types/nodemon
 app.use(express.json())
