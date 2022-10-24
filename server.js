@@ -7,7 +7,7 @@ const Destination = require('./schemas/destination');
 const jwt = require('jsonwebtoken');
 var passport = require("passport");
 var passportJWT = require("passport-jwt");
-const User = require("../schemas/user");
+const User = require("./schemas/user");
 const dotenv = require("dotenv");
 dotenv.config();
 
