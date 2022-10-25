@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3002
+const port = 3003
 const mongodb = require('mongodb').MongoClient
 const mongoose = require('mongoose');
 const Destination = require('./schemas/destination');
@@ -16,7 +16,14 @@ app.use(express.json())
 
 
 app.get('/destinations', (req, res) => {
-  
+    console.log("test");
+    Destination.find({}, (err, destinations) => {
+        if (err) {
+            res.status(500).json(err);
+        } else {
+            res.status(200).json(destinations);
+        }
+    })
 })
 app.post("/destinations", function(req, res) {
     console.log(req.body); // to read the req.body, in postman fill out the body and select "raw"
